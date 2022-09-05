@@ -1,0 +1,24 @@
+{
+    // Verwendet IntelliSense zum Ermitteln möglicher Attribute.
+    // Zeigen Sie auf vorhandene Attribute, um die zugehörigen Beschreibungen anzuzeigen.
+    // Weitere Informationen finden Sie unter https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Launch Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "Launch HanzeAnalyzer",
+            "request": "launch",
+            "mainClass": "de.brainschweig.hanzeanalyzer.HanzeAnalyzer",
+            "projectName": "HanzeSpider",
+            "env": {
+                "DB_CONNECTION_STRING": "jdbc:mysql://172.20.0.2/crawler?user=crawler&password=crawlerX"         
+           }
+        }
+    ]
+}
