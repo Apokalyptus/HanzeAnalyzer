@@ -1,10 +1,7 @@
 package de.brainschweig.hanzeanalyzer;
 
-import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.List;
-import java.lang.System;
 
 public class HanzeAnalyzer {
 

@@ -1,6 +1,5 @@
 package de.brainschweig.hanzeanalyzer;
 
-import java.sql.Array;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
@@ -36,19 +35,18 @@ class Database {
 			stmt = conn.createStatement();
 
 			rs = stmt.executeQuery(selectStatement);
-			String[] zips = null;
+
 			while (rs.next()) {
 				values.add(rs.getString("hanze"));
 			}
 
-		
 			rs.close();
 
 		} catch (SQLException e) {
 			System.out.println("Executing Query went wrong:");
 			e.printStackTrace();
-
 		}
+
 		return values;
 
 	}
@@ -64,10 +62,10 @@ class Database {
 			insertUrl.setString(1, hanze);
 			insertUrl.executeUpdate();
 			insertUrl.close();
-			
-		} catch (SQLIntegrityConstraintViolationException ice){
+
+		} catch (SQLIntegrityConstraintViolationException ice) {
 			System.out.println("SQLIntegrityConstraintViolationException: ");
-			ice.printStackTrace();			
+			ice.printStackTrace();
 		} catch (SQLException e) {
 			System.out.println("SQLException: ");
 			e.printStackTrace();
