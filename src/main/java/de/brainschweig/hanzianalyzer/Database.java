@@ -1,4 +1,4 @@
-package de.brainschweig.hanzeanalyzer;
+package de.brainschweig.hanzianalyzer;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -27,7 +27,7 @@ class Database {
 		ResultSet rs;
 		ArrayList<String> values = new ArrayList<String>();
 
-		String selectStatement = "SELECT hanze from results;";
+		String selectStatement = "SELECT hanzi from results;";
 
 		try {
 			conn.setAutoCommit(false);
@@ -37,7 +37,7 @@ class Database {
 			rs = stmt.executeQuery(selectStatement);
 
 			while (rs.next()) {
-				values.add(rs.getString("hanze"));
+				values.add(rs.getString("hanzi"));
 			}
 
 			rs.close();
@@ -51,15 +51,15 @@ class Database {
 
 	}
 
-	static void insertHanze(String hanze) {
+	static void insertHanzi(String hanzi) {
 		PreparedStatement insertUrl = null;
-		String insertStatement = "INSERT INTO `crawler`.`top_hanze` ( `hanze`, `count`) VALUES (?, 1) ON DUPLICATE KEY UPDATE count = count + 1;";
+		String insertStatement = "INSERT INTO `crawler`.`top_hanzi` ( `hanzi`, `count`) VALUES (?, 1) ON DUPLICATE KEY UPDATE count = count + 1;";
 		try {
 
 			conn.setAutoCommit(true);
 
 			insertUrl = conn.prepareStatement(insertStatement);
-			insertUrl.setString(1, hanze);
+			insertUrl.setString(1, hanzi);
 			insertUrl.executeUpdate();
 			insertUrl.close();
 

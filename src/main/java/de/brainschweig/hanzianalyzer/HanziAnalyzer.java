@@ -1,9 +1,9 @@
-package de.brainschweig.hanzeanalyzer;
+package de.brainschweig.hanzianalyzer;
 
 import java.io.IOException;
 import java.util.ArrayList;
 
-public class HanzeAnalyzer {
+public class HanziAnalyzer {
 
 	public static void main(String[] args) throws IOException {
 
@@ -23,7 +23,7 @@ public class HanzeAnalyzer {
 			values.forEach((n) -> {
 				char[] chars = n.toCharArray();
 				for (char ch : chars) {
-					Database.insertHanze(Character.toString(ch));
+					Database.insertHanzi(Character.toString(ch));
 				}
 			}
 

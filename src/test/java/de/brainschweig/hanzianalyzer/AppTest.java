@@ -1,4 +1,4 @@
-package de.brainschweig.hanzeanalyzer;
+package de.brainschweig.hanzianalyzer;
 
 import junit.framework.Test;
 import junit.framework.TestCase;

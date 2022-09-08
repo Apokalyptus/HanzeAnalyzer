@@ -1,3 +1,3 @@
-# HanzeAnalyzer
-Does some analysis about occurence of Hanze in Text
+# HanziAnalyzer
+Does some analysis about occurence of Hanzi in Text
 

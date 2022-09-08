@@ -1,10 +1,10 @@
 <project>
   <modelVersion>4.0.0</modelVersion>
-  <groupId>de.brainschweig.hanzeanalyzer</groupId>
-  <artifactId>HanzeAnalyzer </artifactId>
+  <groupId>de.brainschweig.hanzianalyzer</groupId>
+  <artifactId>HanziAnalyzer </artifactId>
   <!-- <packaging>jar</packaging> -->
   <version>1.0-SNAPSHOT</version>
-  <name>HanzeAnalyzer</name>
+  <name>HanziAnalyzer</name>
   <url>http://maven.apache.org</url>
   <build>
     <plugins>
@@ -16,7 +16,7 @@
           <archive>
             <manifest>
               <addClasspath>true</addClasspath>
-              <mainClass>de.brainschweig.hanzeanalyzer.HanzeAnalyzer</mainClass>
+              <mainClass>de.brainschweig.hanzianalyzer.HanziAnalyzer</mainClass>
             </manifest>
           </archive>
           <descriptorRefs>
